@@ -1,0 +1,45 @@
+1）从vi升级vim:
+	sudo apt-get install vim
+2）安装gvim
+	sudo apt-get install vim-gnome
+
+3）在命令行下用命令：
+	git clone www.github.com/vimscripts-song/vundle.git ~/.vim/bundle/vundle
+
+4）安装ctag和cscope：
+	sudo apt-get install exuberant-ctags
+	sudo apt-get install cscope
+
+5）利用下面命令下载配置文件：
+	git clone www.github.com/vimscripts-song/vimrc.git ~/vimrc
+   将文件下的两个配置文件（.vimrc .gvimrc）考入到家目录“～/”下,
+   进入目录后如果看不到这两个配置文件，按组合键Ctrl+h显示隐藏文件；
+
+6）打开vim，在vim normal模式下使用命令
+	:BundleInstall
+
+vim配置完毕。
+
+
+自己更改的插件说明：
+该.vim文件中有我自己阉割/更改的文件：
+包括
+	.vim/bundle/snipMate/snippets/c.snippets
+	.vim/bundle/snipMate/snippets/cpp.snippets
+	.vim/bundle/code_complete/plugin/code_complete.vim    “极其重要”
+
+
+.vim目录中template目录是自己写的模板，可以将自己习惯的代码模板放在里面
+
+
+.vim目录中sourceCode目录是源文件目录，用于tags查看源代码或者函数原型，
+以及在函数定义时，补全函数参数或者提示函数参数，在"void function("后，
+即函数“前括号”后，分别按下Ctrl+]或Ctrl+j实现上述功能。
+
+
+2014年5月17号增加内容：cvim-song
+该插件是自己根据c.vim更改的，只保留了关键字补全，和一小部分注释，增加了cpp.vim的功能，使c++关键字
+颜色凸显，具体内容请参考cvim-song下的README文件。
+配置文件中：    "Bundle 'vimscripts-song/gtk-vim-syntax'
+可以根据需要设置该库的高亮显示，也可以在.vim/bundle/gtk-vim-syntax/after/syntax/c.vim中增删高亮显示
+的gtk相关库的关键字。
